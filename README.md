@@ -2,11 +2,11 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-A curated list of research-oriented skills that currently work with **OpenAI Codex**.
+A practical index of research-oriented skills that work with **OpenAI Codex**.
 
-This list stays deliberately conservative. It favors official sources, repositories that explicitly document Codex interoperability, and open Agent Skills that Codex can read directly.
+It focuses on official skills, repos that clearly say they support Codex, and open Agent Skills that Codex can read without much adaptation.
 
-To keep the list usable, each skill appears only once. If a skill fits several workflows, it is placed under its primary use case. The upstream `SKILL.md` remains the source of truth before installation or serious use.
+Each skill is listed once, under the workflow where it is most likely to be useful. Before installing or relying on one, check the upstream `SKILL.md`; this repo is a map, not the source of record.
 
 ---
 

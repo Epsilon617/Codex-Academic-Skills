@@ -2,11 +2,11 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-这是一个面向科研工作流的 **OpenAI Codex** skill 清单。
+这是一份给 **OpenAI Codex** 用的科研向 skill 索引。
 
-这份清单故意收得克制：优先保留官方来源、明确写明兼容 Codex 的仓库，以及采用开放 Agent Skills 格式且能被 Codex 直接读取的 skill。
+优先放官方 skill、明确写过支持 Codex 的仓库，以及 Codex 基本可以直接读取的开放 Agent Skills。
 
-为了降低认知负担，表格里每个 skill 只放一次。遇到跨场景可用的 skill，请按它最主要的用途去找；真正安装或调用前，以上游 `SKILL.md` 为准。
+每个 skill 只列一次，放在它最常用的场景下面。真正安装或长期使用前，还是先看一眼上游的 `SKILL.md`；这个仓库负责指路，不替代原仓库。
 
 ---
 
