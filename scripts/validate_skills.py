@@ -50,6 +50,7 @@ def main() -> None:
             )
 
         seen_rows: set[tuple[str, ...]] = set()
+        seen_skill_names: dict[str, int] = {}
         seen_links: dict[str, tuple[str, str]] = {}
         category_pairs: dict[str, str] = {}
 
@@ -64,6 +65,15 @@ def main() -> None:
             if row_key in seen_rows:
                 fail(f"row {index} duplicates an existing row")
             seen_rows.add(row_key)
+
+            existing_skill_row = seen_skill_names.get(values["skill_name"])
+            if existing_skill_row is not None:
+                fail(
+                    "row "
+                    f"{index} repeats skill_name={values['skill_name']} "
+                    f"already used on row {existing_skill_row}"
+                )
+            seen_skill_names[values["skill_name"]] = index
 
             existing_link = seen_links.get(values["link"])
             if existing_link is None:
