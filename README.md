@@ -56,7 +56,7 @@ Task-based scan:
 
 - Research orchestration, project planning, and model choice: section 1.
 - Context engineering, agent design, and structured outputs: section 2.
-- Paper drafting and formal scholarly writing: section 3.
+- Paper drafting, formal scholarly writing, and de-AI editing: section 3.
 - Literature review, transcription, and evidence synthesis: section 4.
 - Demos, figures, talks, and presentation assets: section 5.
 - Data, retrieval, experiment tracking, and observability: section 6.
@@ -82,10 +82,12 @@ If you only want a small starter set, begin here. These skills cover broad resea
 | `jupyter-notebook` | Creates clean, reproducible Jupyter notebooks for experiments and tutorials. | [openai/skills](https://github.com/openai/skills/tree/main/skills/.curated/jupyter-notebook) |
 | `huggingface-datasets` | Explores Dataset Viewer API metadata, rows, search, filters, parquet URLs, and statistics. | [huggingface/skills](https://github.com/huggingface/skills/tree/main/skills/huggingface-datasets) |
 | `huggingface-local-models` | Selects GGUF models, quantization levels, and llama.cpp commands for local inference. | [huggingface/skills](https://github.com/huggingface/skills/tree/main/skills/huggingface-local-models) |
+| `hf-mem` | Estimates inference memory and optional KV-cache requirements for Safetensors or GGUF models on the Hugging Face Hub. | [huggingface/skills](https://github.com/huggingface/skills/tree/main/skills/hf-mem) |
 | `huggingface-llm-trainer` | Trains or fine-tunes language models with TRL on Hugging Face Jobs, including SFT, DPO, GRPO, and reward models. | [huggingface/skills](https://github.com/huggingface/skills/tree/main/skills/huggingface-llm-trainer) |
 | `lm-evaluation-harness` | Runs standardized LLM benchmarks such as MMLU, HumanEval, GSM8K, and TruthfulQA. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/11-evaluation/lm-evaluation-harness) |
 | `vllm` | Serves LLMs with high-throughput inference and OpenAI-compatible endpoints. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/12-inference-serving/vllm) |
 | `transformer-lens` | Supports mechanistic interpretability with HookPoints, activation caching, and causal tracing. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/04-mechanistic-interpretability/transformer-lens) |
+| `remove-ai-flavor` | Revises Chinese prose to remove template-like AI phrasing while preserving facts, stance, and author voice. | [B1lli/remove-ai-flavor-writing-skill](https://github.com/B1lli/remove-ai-flavor-writing-skill) |
 | `ara-compiler` | Compiles papers, repos, logs, and notes into Agent-Native Research Artifacts with claims, evidence, and provenance. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/22-agent-native-research-artifact/compiler) |
 
 ---
@@ -104,6 +106,7 @@ If you only want a small starter set, begin here. These skills cover broad resea
 | `brainstorming-research-ideas` | Guides structured ideation for high-impact research directions. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/21-research-ideation/brainstorming-research-ideas) |
 | `creative-thinking-for-research` | Applies creativity frameworks to generate less obvious research ideas. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/21-research-ideation/creative-thinking-for-research) |
 | `openai-docs` | Looks up current OpenAI product and API documentation with source-grounded guidance. | [openai/skills](https://github.com/openai/skills/tree/main/skills/.curated/openai-docs) |
+| `define-goal` | Turns fuzzy intentions into concrete, measurable objectives before long-running agent work. | [openai/skills](https://github.com/openai/skills/tree/main/skills/.curated/define-goal) |
 | `huggingface-best` | Finds and compares candidate models using official Hugging Face benchmark leaderboards and metadata. | [huggingface/skills](https://github.com/huggingface/skills/tree/main/skills/huggingface-best) |
 
 ### 2. Context and Agent Design
@@ -121,6 +124,7 @@ If you only want a small starter set, begin here. These skills cover broad resea
 | `multi-agent-patterns` | Designs supervisor, swarm, and hierarchical multi-agent systems with clearer coordination. | [muratcankoylan/Agent-Skills-for-Context-Engineering](https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/multi-agent-patterns) |
 | `memory-systems` | Designs persistent agent memory and evaluates retrieval quality across sessions. | [muratcankoylan/Agent-Skills-for-Context-Engineering](https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/memory-systems) |
 | `tool-design` | Designs agent-facing tools and MCP interfaces with clearer contracts and less ambiguity. | [muratcankoylan/Agent-Skills-for-Context-Engineering](https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/tool-design) |
+| `harness-engineering` | Designs autonomous agent harnesses with locked metrics, editable surfaces, durable logs, rollback, and approval boundaries. | [muratcankoylan/Agent-Skills-for-Context-Engineering](https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/harness-engineering) |
 | `dspy` | Uses declarative prompt programming and optimizers for structured agent workflows. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/16-prompt-engineering/dspy) |
 | `guidance` | Controls generation with regexes and grammars for structured outputs and multi-step prompting. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/16-prompt-engineering/guidance) |
 | `instructor` | Produces Pydantic-validated structured outputs for extraction, labeling, and automation. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/16-prompt-engineering/instructor) |
@@ -130,11 +134,13 @@ If you only want a small starter set, begin here. These skills cover broad resea
 
 | Skill | What It Does | Link |
 |------|--------------|------|
-| `doc` | Creates and reviews DOCX documents with rendering checks. | [openai/skills](https://github.com/openai/skills/tree/main/skills/.curated/doc) |
 | `pdf` | Reads, creates, and reviews PDFs when layout and rendering matter. | [openai/skills](https://github.com/openai/skills/tree/main/skills/.curated/pdf) |
 | `huggingface-paper-publisher` | Publishes papers on Hugging Face Hub and manages paper metadata. | [huggingface/skills](https://github.com/huggingface/skills/tree/main/skills/huggingface-paper-publisher) |
 | `ml-paper-writing` | Writes publication-oriented ML, AI, and systems papers. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/20-ml-paper-writing/ml-paper-writing) |
 | `systems-paper-writing` | Provides paragraph-level blueprints for OSDI, SOSP, ASPLOS, NSDI, and EuroSys papers. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/20-ml-paper-writing/systems-paper-writing) |
+| `remove-ai-flavor` | Revises Chinese prose to remove template-like AI phrasing while preserving facts, stance, and author voice. | [B1lli/remove-ai-flavor-writing-skill](https://github.com/B1lli/remove-ai-flavor-writing-skill) |
+| `unslop` | Audits and rewrites AI-generated prose with fact preservation, voice presets, and explicit anti-pattern checks. | [theclaymethod/unslop](https://github.com/theclaymethod/unslop) |
+| `peer-review` | Produces structured manuscript or grant reviews with methodology, statistics, reproducibility, and reporting-standard checks. | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/peer-review) |
 
 ### 4. Literature Reading and Evidence Synthesis
 
@@ -143,6 +149,7 @@ If you only want a small starter set, begin here. These skills cover broad resea
 | `transcribe` | Transcribes interviews, meetings, or recorded talks with optional speaker diarization. | [openai/skills](https://github.com/openai/skills/tree/main/skills/.curated/transcribe) |
 | `whisper` | Runs multilingual speech recognition and translation for interviews, lectures, podcasts, and audio corpora. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/18-multimodal/whisper) |
 | `huggingface-papers` | Looks up Hugging Face paper pages and structured paper metadata. | [huggingface/skills](https://github.com/huggingface/skills/tree/main/skills/huggingface-papers) |
+| `citation-management` | Searches, verifies, deduplicates, and formats academic citations and BibTeX metadata. | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/citation-management) |
 | `llamaindex` | Builds document ingestion and retrieval pipelines for research corpora. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/14-agents/llamaindex) |
 | `faiss` | Provides high-performance dense retrieval for paper collections. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/15-rag/faiss) |
 | `sentence-transformers` | Generates embeddings for literature search, clustering, and retrieval. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/15-rag/sentence-transformers) |
@@ -152,6 +159,7 @@ If you only want a small starter set, begin here. These skills cover broad resea
 | Skill | What It Does | Link |
 |------|--------------|------|
 | `huggingface-gradio` | Builds Gradio web UIs and interactive research demos in Python. | [huggingface/skills](https://github.com/huggingface/skills/tree/main/skills/huggingface-gradio) |
+| `huggingface-spaces` | Builds, deploys, and debugs Hugging Face Spaces across Gradio, Docker, Static, ZeroGPU, and paid hardware. | [huggingface/skills](https://github.com/huggingface/skills/tree/main/skills/huggingface-spaces) |
 | `huggingface-trackio` | Tracks training metrics, alerts, and dashboards with Hugging Face Trackio. | [huggingface/skills](https://github.com/huggingface/skills/tree/main/skills/huggingface-trackio) |
 | `academic-plotting` | Generates publication-quality charts, ablations, and architecture figures. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/20-ml-paper-writing/academic-plotting) |
 | `presenting-conference-talks` | Turns papers into Beamer or PPTX talk decks with speaker notes and scripts. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/20-ml-paper-writing/presenting-conference-talks) |
@@ -159,6 +167,7 @@ If you only want a small starter set, begin here. These skills cover broad resea
 | `imagegen` | Creates or edits bitmap figures, mockups, infographics, and visual assets. | [openai/skills](https://github.com/openai/skills/tree/main/skills/.system/imagegen) |
 | `transformers-js` | Runs Hugging Face models in JavaScript for browser-side demos and interactive artifacts. | [huggingface/skills](https://github.com/huggingface/skills/tree/main/skills/transformers-js) |
 | `stable-diffusion` | Generates figures, concept art, and presentation assets for multimodal research. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/18-multimodal/stable-diffusion) |
+| `scientific-visualization` | Creates publication-ready scientific figures with journal styles, multi-panel layouts, and accessible palettes. | [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/scientific-visualization) |
 
 ### 6. Data, Retrieval, and Experiment Tracking
 
@@ -170,6 +179,7 @@ If you only want a small starter set, begin here. These skills cover broad resea
 | `huggingface-community-evals` | Adds and manages evaluation results in model cards and custom HF Hub evaluations. | [huggingface/skills](https://github.com/huggingface/skills/tree/main/skills/huggingface-community-evals) |
 | `huggingface-tool-builder` | Builds reusable scripts around the Hugging Face API for metadata collection and automation. | [huggingface/skills](https://github.com/huggingface/skills/tree/main/skills/huggingface-tool-builder) |
 | `huggingface-local-models` | Selects GGUF models, quantization levels, and llama.cpp commands for local inference. | [huggingface/skills](https://github.com/huggingface/skills/tree/main/skills/huggingface-local-models) |
+| `hf-mem` | Estimates inference memory and optional KV-cache requirements for Safetensors or GGUF models on the Hugging Face Hub. | [huggingface/skills](https://github.com/huggingface/skills/tree/main/skills/hf-mem) |
 | `ray-data` | Scales batch inference, preprocessing, and multimodal ETL from one machine to clusters. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/05-data-processing/ray-data) |
 | `nemo-curator` | Curates training corpora with deduplication, quality filtering, PII redaction, and multimodal cleanup. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/05-data-processing/nemo-curator) |
 | `weights-and-biases` | Tracks experiments, sweeps, artifacts, and model registries. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/13-mlops/weights-and-biases) |
@@ -191,6 +201,7 @@ This category can grow quickly, so it keeps representative entries tied closely 
 | `unsloth` | Accelerates LoRA and QLoRA fine-tuning with lower memory use for local experiments. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/03-fine-tuning/unsloth) |
 | `peft` | Covers parameter-efficient fine-tuning with LoRA, QLoRA, DoRA, and adapters. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/03-fine-tuning/peft) |
 | `trl-fine-tuning` | Uses TRL for post-training workflows such as SFT, DPO, PPO, GRPO, and reward-model training. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/06-post-training/trl-fine-tuning) |
+| `train-sentence-transformers` | Trains bi-encoders, rerankers, and sparse encoders with sentence-transformers for retrieval and similarity workflows. | [huggingface/skills](https://github.com/huggingface/skills/tree/main/skills/train-sentence-transformers) |
 | `grpo-rl-training` | Specializes in GRPO-based post-training for reasoning, verifiable tasks, and custom rewards. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/06-post-training/grpo-rl-training) |
 | `lm-evaluation-harness` | Runs standardized LLM benchmarks such as MMLU, HumanEval, GSM8K, and TruthfulQA. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/11-evaluation/lm-evaluation-harness) |
 | `bigcode-evaluation-harness` | Benchmarks code models with HumanEval, MBPP, MultiPL-E, and pass@k workflows. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/11-evaluation/bigcode-evaluation-harness) |
@@ -199,6 +210,7 @@ This category can grow quickly, so it keeps representative entries tied closely 
 | `sglang` | Serves LLMs and VLMs with fast structured generation, prefix caching, and JSON/tool-calling workflows. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/12-inference-serving/sglang) |
 | `llama-cpp` | Runs quantized LLMs on CPUs, Apple Silicon, and non-CUDA hardware. | [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs/tree/main/12-inference-serving/llama-cpp) |
 | `cuda-kernels` | Guides optimized CUDA kernel writing and benchmarking for Hugging Face diffusers and transformers. | [huggingface/kernels](https://github.com/huggingface/kernels/tree/main/kernel-builder/skills/cuda-kernels) |
+| `rocm-kernels` | Guides optimized Triton kernel writing and benchmarking for AMD ROCm GPUs in diffusers and transformers workflows. | [huggingface/kernels](https://github.com/huggingface/kernels/tree/main/kernel-builder/skills/rocm-kernels) |
 
 ### 8. Interpretability and Model Analysis
 
@@ -266,8 +278,10 @@ Examples:
 
 - `Use autoresearch to set up an experiment loop for this idea.`
 - `Use huggingface-best to compare current open models for this benchmark.`
+- `Use hf-mem to estimate whether this model fits on my GPU.`
 - `Use academic-plotting to turn these ablation results into camera-ready figures.`
 - `Use huggingface-local-models to choose a GGUF model for this laptop.`
+- `Use remove-ai-flavor to clean up this Chinese project summary.`
 - `Use ara-compiler to turn this paper and repo into a research artifact.`
 
 ### Recommended usage pattern
@@ -299,5 +313,8 @@ If you notice a dead link, a naming change, or a clearly better entry for the li
 - [Hugging Face Kernels skills add](https://huggingface.co/docs/kernels/cli-skills)
 - [huggingface/kernels](https://github.com/huggingface/kernels)
 - [Orchestra-Research/AI-Research-SKILLs](https://github.com/Orchestra-Research/AI-Research-SKILLs)
+- [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills)
 - [Agent-Skills-for-Context-Engineering](https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering)
+- [B1lli/remove-ai-flavor-writing-skill](https://github.com/B1lli/remove-ai-flavor-writing-skill)
+- [theclaymethod/unslop](https://github.com/theclaymethod/unslop)
 - [Agent Skills Open Standard](https://agentskills.io)
