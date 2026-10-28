@@ -108,6 +108,7 @@ If you only want a small starter set, begin here. These skills cover broad resea
 | `openai-docs` | Looks up current OpenAI product and API documentation with source-grounded guidance. | [openai/skills](https://github.com/openai/skills/tree/main/skills/.curated/openai-docs) |
 | `define-goal` | Turns fuzzy intentions into concrete, measurable objectives before long-running agent work. | [openai/skills](https://github.com/openai/skills/tree/main/skills/.curated/define-goal) |
 | `huggingface-best` | Finds and compares candidate models using official Hugging Face benchmark leaderboards and metadata. | [huggingface/skills](https://github.com/huggingface/skills/tree/main/skills/huggingface-best) |
+| `multi-llm` | Reviews implementation plans and code in parallel with multiple LLMs, then validates and consolidates findings. | [beastlabai/multi-llm-plugin](https://github.com/beastlabai/multi-llm-plugin/tree/master/packaging/codex/multi-llm/skills/multi-llm) |
 
 ### 2. Context and Agent Design
 
