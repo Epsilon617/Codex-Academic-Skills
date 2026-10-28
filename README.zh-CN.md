@@ -108,6 +108,7 @@ Codex 会先看到 skill 的名称、简介和路径；只有当任务匹配时�
 | `openai-docs` | 核对最新 OpenAI 产品和 API 文档，并给出有来源依据的建议。 | [openai/skills](https://github.com/openai/skills/tree/main/skills/.curated/openai-docs) |
 | `define-goal` | 把模糊意图整理成可验证的目标，适合长任务开始前定清边界。 | [openai/skills](https://github.com/openai/skills/tree/main/skills/.curated/define-goal) |
 | `huggingface-best` | 基于 Hugging Face 官方 benchmark leaderboard 和元数据筛选、比较候选模型。 | [huggingface/skills](https://github.com/huggingface/skills/tree/main/skills/huggingface-best) |
+| `multi-llm` | 使用多个 LLM 并行评审实现计划和代码，再验证并汇总反馈。 | [beastlabai/multi-llm-plugin](https://github.com/beastlabai/multi-llm-plugin/tree/master/packaging/codex/multi-llm/skills/multi-llm) |
 
 ### 2. 上下文与 Agent 设计
 
